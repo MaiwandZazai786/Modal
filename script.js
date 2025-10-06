@@ -1,10 +1,10 @@
 'use strict';
 
-const modalWindow = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
+const modalWindow = getElement('.modal');
+const overlay = getElement('.overlay');
+const closeModal = getElement('.close-modal');
+const bodyElement = getElement('body');
 const showBTN = document.querySelectorAll('.show-modal');
-const closeModal = document.querySelector('.close-modal');
-const bodyElement = document.querySelector('body');
 
 for (let show of showBTN) {
   show.addEventListener('click', () => {
@@ -20,3 +20,7 @@ const ModalClose = function () {
 
 closeModal.addEventListener('click', ModalClose);
 overlay.addEventListener('click', ModalClose);
+
+function getElement(targetElement) {
+  return document.querySelector(targetElement);
+}
