@@ -16,6 +16,12 @@ for (let show of showBTN) {
 closeModalBTN.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    if (!modalWindow.classList.contains('hidden')) closeModal();
+  }
+});
+
 function closeModal() {
   modalWindow.classList.add('hidden');
   overlay.classList.add('hidden');
