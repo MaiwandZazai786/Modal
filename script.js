@@ -2,7 +2,7 @@
 
 const modalWindow = getElement('.modal');
 const overlay = getElement('.overlay');
-const closeModal = getElement('.close-modal');
+const closeModalBTN = getElement('.close-modal');
 const bodyElement = getElement('body');
 const showBTN = document.querySelectorAll('.show-modal');
 
@@ -13,10 +13,10 @@ for (let show of showBTN) {
   });
 }
 
-closeModal.addEventListener('click', ModalClose);
-overlay.addEventListener('click', ModalClose);
+closeModalBTN.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
 
-function ModalClose() {
+function closeModal() {
   modalWindow.classList.add('hidden');
   overlay.classList.add('hidden');
 }
