@@ -13,13 +13,13 @@ for (let show of showBTN) {
   });
 }
 
-const ModalClose = function () {
-  modalWindow.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
-
 closeModal.addEventListener('click', ModalClose);
 overlay.addEventListener('click', ModalClose);
+
+function ModalClose() {
+  modalWindow.classList.add('hidden');
+  overlay.classList.add('hidden');
+}
 
 function getElement(targetElement) {
   return document.querySelector(targetElement);
