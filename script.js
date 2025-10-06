@@ -13,7 +13,10 @@ for (let show of showBTN) {
   });
 }
 
-closeModal.addEventListener('click', () => {
+const ModalClose = function () {
   modalWindow.classList.add('hidden');
   overlay.classList.add('hidden');
-});
+};
+
+closeModal.addEventListener('click', ModalClose);
+overlay.addEventListener('click', ModalClose);
